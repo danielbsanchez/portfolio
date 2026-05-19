@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daniel Sanchez — IA Builder & Especialista em CMS HubSpot e Duda</title>
+<title>Daniel Sanchez — Sistemas CMS, componentização e IA aplicada | Dev HubSpot & Duda</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
@@ -1353,6 +1353,50 @@
     letter-spacing: -0.01em;
     white-space: nowrap;
   }
+
+  .project-cta {
+  margin-top: auto;
+
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+
+  width: fit-content;
+
+  padding-top: 1.4rem;
+
+  font-size: .95rem;
+  font-weight: 600;
+
+  color: #ff7a1a;
+
+  text-decoration: none;
+
+  transition:
+    gap .25s ease,
+    color .25s ease,
+    opacity .25s ease;
+}
+
+.project-cta:hover {
+  gap: .75rem;
+  color: #ffa45c;
+}
+
+.project-cta span {
+  font-size: .9rem;
+  transition: transform .25s ease;
+}
+
+.project-cta:hover span {
+  transform: translate(2px, -2px);
+}
+
+.project-cta.disabled {
+  opacity: .45;
+  pointer-events: none;
+  cursor: default;
+}
 </style>
 </head>
 <body>
@@ -1397,7 +1441,7 @@
           CMS não deveria <em>limitar</em> o time. Nem <em>depender</em> de dev.
         </h1>
         <p class="hero-sub reveal reveal-delay-2">
-          Desenvolvo componentes, sistemas e micro SaaS usando <strong>HubSpot</strong>, <strong>Duda</strong> e IA para dar <strong>autonomia</strong> real aos times de marketing.
+          Desenvolvo sistemas, componentes e ferramentas usando <strong>HubSpot</strong>, <strong>Duda</strong> e <strong>IA</strong> para dar <strong>autonomia</strong> real aos times de marketing.
         </p>
         <div class="hero-actions reveal reveal-delay-3">
           <a href="#projetos" class="btn-primary">Ver projetos →</a>
@@ -1406,11 +1450,11 @@
         <div class="tools-strip reveal reveal-delay-4">
           <span class="tools-label">Stack</span>
           <div class="tools-list">
-            <span class="tool-pill"><span class="tool-dot"></span>HubSpot CMS</span>
+            <span class="tool-pill"><span class="tool-dot"></span>HubSpot</span>
             <span class="tool-pill"><span class="tool-dot"></span>Duda</span>
-            <span class="tool-pill"><span class="tool-dot"></span>Claude API</span>
+            <span class="tool-pill"><span class="tool-dot"></span>Claude</span>
             <span class="tool-pill"><span class="tool-dot"></span>Lovable</span>
-            <span class="tool-pill"><span class="tool-dot"></span>Next.js</span>
+            <span class="tool-pill"><span class="tool-dot"></span>Scrum</span>
           </div>
         </div>
       </div>
@@ -1473,17 +1517,17 @@
 
       <div class="abord-left">
         <div class="section-eyebrow reveal">Como eu penso</div>
-        <h2 class="section-title reveal reveal-delay-1">Construo sistemas.<br>Não <em style="color:var(--orange);font-style:normal">apenas páginas.</em></h2>
+        <h2 class="section-title reveal reveal-delay-1">Estruturo sistemas para marketing operar. <em style="color:var(--orange);font-style:normal">Não só páginas.</em></h2>
         <p class="abord-body reveal reveal-delay-2">
-          Trato CMS como <strong>infraestrutura de produto</strong> — não como uma ferramenta de publicação. Cada componente que construo é pensado para ser reutilizável, configurável e compreensível por alguém que não escreve código.
+          Vejo CMS como uma <strong>camada operacional do produto</strong>, não apenas como ferramenta de publicação. Estruturo componentes, dados e fluxos pensando em autonomia real para quem vai operar o sistema no dia a dia.
         </p>
         <p class="abord-body reveal reveal-delay-3" style="margin-top:1rem">
-          Uso <strong>IA como acelerador de construção</strong> — para prototipar antes de implementar, validar hipóteses antes de escrever uma linha real, e eliminar retrabalho que drena tempo de todo projeto de CMS.
+          Estruturo componentes, dados e fluxos pensando em <strong>autonomia real</strong> para quem vai operar o sistema no dia a dia.
         </p>
         <div class="abord-narrative reveal reveal-delay-4">
-          // Comecei construindo páginas em CMS tradicionais.<br>
-          // Evoluí para criar <em>sistemas completos</em> —<br>
-          // combinando componentização, dados externos e IA.
+          // Comecei construindo páginas em CMS.<br>
+          // Evoluí para <em>arquiteturas componentizadas</em>.<br>
+          // Hoje construo sistemas operáveis por marketing.
         </div>
       </div>
 
@@ -1493,36 +1537,36 @@
           <li class="abord-item reveal reveal-delay-1">
             <div class="abord-item-icon">🧩</div>
             <div class="abord-item-content">
-              <div class="abord-item-title">Componentização real</div>
-              <div class="abord-item-desc">Módulos atômicos que compõem qualquer layout sem duplicação de código — estrutura que escala sem virar caos.</div>
+              <div class="abord-item-title">Componentes pensados para escalar</div>
+              <div class="abord-item-desc">Crio estruturas reutilizáveis em HubSpot e Duda que permitem criar novas páginas sem reconstruir layout a cada entrega.</div>
             </div>
           </li>
           <li class="abord-item reveal reveal-delay-2">
             <div class="abord-item-icon">👥</div>
             <div class="abord-item-content">
-              <div class="abord-item-title">Autonomia para times não técnicos</div>
-              <div class="abord-item-desc">Times de marketing publicam, editam e testam sem depender de dev. O sistema é construído para quem vai operar, não para quem vai construir.</div>
+              <div class="abord-item-title">Marketing opera sem depender de dev</div>
+              <div class="abord-item-desc">Os sistemas são pensados para edição, publicação e expansão de conteúdo sem necessidade de desenvolvimento para cada ajuste.</div>
             </div>
           </li>
           <li class="abord-item reveal reveal-delay-3">
             <div class="abord-item-icon">🔗</div>
             <div class="abord-item-content">
-              <div class="abord-item-title">Dados externos no CMS</div>
-              <div class="abord-item-desc">Integração com Google Sheets, APIs, CRMs e fontes externas. Páginas que se atualizam automaticamente quando os dados mudam.</div>
+              <div class="abord-item-title">CMS conectado a fontes externas</div>
+              <div class="abord-item-desc">Integro Google Sheets, APIs e estruturas dinâmicas ao CMS para atualizar conteúdo sem operação manual repetitiva.</div>
             </div>
           </li>
           <li class="abord-item reveal reveal-delay-4">
             <div class="abord-item-icon">⚡</div>
             <div class="abord-item-content">
-              <div class="abord-item-title">Prototipação com IA antes de construir</div>
-              <div class="abord-item-desc">Valido a solução com Claude e Lovable antes de qualquer implementação real. Reduz risco, alinha expectativas, economiza tempo.</div>
+              <div class="abord-item-title">IA usada antes da implementação</div>
+              <div class="abord-item-desc">Uso Claude, GPT e Lovable para validar soluções, testar estruturas e acelerar decisões antes da construção final.</div>
             </div>
           </li>
           <li class="abord-item reveal reveal-delay-5">
             <div class="abord-item-icon">🎯</div>
             <div class="abord-item-content">
-              <div class="abord-item-title">Performance como requisito, não acabamento</div>
-              <div class="abord-item-desc">Sem JS desnecessário, sem dependências que pesam. Performance é decisão de arquitetura — não ajuste pós-entrega.</div>
+              <div class="abord-item-title">Performance definida na arquitetura</div>
+              <div class="abord-item-desc">Evito dependências e JS desnecessário desde a construção dos componentes — não como otimização pós-projeto.</div>
             </div>
           </li>
         </ul>
@@ -1539,61 +1583,70 @@
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow reveal">Projetos com IA</div>
-      <h2 class="section-title reveal reveal-delay-1">Do problema ao protótipo.<br>Rápido e sem atalho.</h2>
-      <p class="section-lead reveal reveal-delay-2">Não uso IA para gerar código aleatório. Uso como ferramenta de prototipação rápida — para validar antes de construir.</p>
+      <h2 class="section-title reveal reveal-delay-1">Ferramentas e produtos <br/>construídos com IA.</h2>
+      <p class="section-lead reveal reveal-delay-2">Uso IA como acelerador de validação e construção — criando protótipos, ferramentas internas e micro SaaS focados em resolver problemas operacionais reais.</p>
     </div>
 
     <div class="projects-grid">
 
       <div class="project-card reveal">
-        <div class="project-type">MVP</div>
-        <div class="project-name">CMS Audit Tool</div>
-        <p class="project-problem">Times de marketing perdiam horas revisando manualmente páginas do HubSpot à procura de inconsistências de módulos e módulos desatualizados.</p>
+        <div class="project-type">Produto</div>
+        <div class="project-name">Bancada Digital</div>
+        <p class="project-problem">Plataforma criada para transformar retrospectivas em ações rastreáveis — centralizando planos, responsáveis e acompanhamento contínuo em um único fluxo operacional.</p>
         <div class="project-solution-label">// Solução</div>
-        <p class="project-solution">Ferramenta que varre o portal, mapeia componentes em uso e gera um relatório de inconsistências com prioridade de correção. Prototipado em 2 dias.</p>
+        <p class="project-solution">Sistema desenvolvido com IA para estruturar retrospectivas, acompanhar pendências e gerar visibilidade sobre ações em andamento entre times.</p>
         <div class="project-stack">
-          <span class="stack-tag">Claude API</span>
-          <span class="stack-tag">HubSpot CMS API</span>
           <span class="stack-tag">Lovable</span>
+          <span class="stack-tag">IA aplicada</span>
         </div>
+        <a href="https://bancadadigital.com.br/" target="_blank" class="project-cta">
+          Ver produto
+          <span>↗</span>
+        </a>
       </div>
 
       <div class="project-card reveal reveal-delay-1">
-        <div class="project-type">Protótipo</div>
-        <div class="project-name">Landing Page Generator</div>
-        <p class="project-problem">Marketing precisava criar variações de landing pages para A/B test, mas cada variação exigia trabalho manual de dev — atrasando campanhas em semanas.</p>
+        <div class="project-type">Ferramenta</div>
+        <div class="project-name">Formulário inteligente de demandas</div>
+        <p class="project-problem">Sistema criado para estruturar solicitações internas antes da abertura de demandas no Azure DevOps — reduzindo ruído entre áreas e aumentando clareza para o time técnico.</p>
         <div class="project-solution-label">// Solução</div>
-        <p class="project-solution">Sistema de templates inteligentes no Duda onde o time preenche um brief e recebe uma landing page configurada com os módulos corretos. Zero dev após setup.</p>
+        <p class="project-solution">O formulário organiza contexto, problema, impacto e critérios de aceite em um formato padronizado, facilitando entendimento, refinamento e priorização das tasks.</p>
         <div class="project-stack">
           <span class="stack-tag">Claude</span>
-          <span class="stack-tag">Duda API</span>
-          <span class="stack-tag">Lovable</span>
+          <span class="stack-tag">Azure DevOps</span>
+          <span class="stack-tag">IA aplicada</span>
         </div>
+        <a href="https://form-devops-opm-cms.vercel.app/" target="_blank" class="project-cta">
+          Ver ferramenta
+          <span>↗</span>
+        </a>
       </div>
 
       <div class="project-card reveal reveal-delay-2">
-        <div class="project-type">Experimento</div>
-        <div class="project-name">Content Schema Mapper</div>
-        <p class="project-problem">Migrações de CMS eram caóticas porque não havia mapeamento claro de onde cada tipo de conteúdo vivia e como se relacionava com os templates.</p>
+        <div class="project-type">Produto</div>
+        <div class="project-name">TCG CatLog</div>
+        <p class="project-problem">Sistema desenvolvido para registrar partidas de Magic e acompanhar métricas de desempenho dos decks ao longo do tempo.</p>
         <div class="project-solution-label">// Solução</div>
-        <p class="project-solution">Ferramenta que analisa a estrutura atual do CMS e gera automaticamente um schema visual de conteúdo — facilitando migrações e onboarding de novos devs.</p>
+        <p class="project-solution">Além do histórico completo de partidas, o app consolida estatísticas como winrate e performance por deck em uma experiência otimizada para uso rápido durante as partidas.</p>
         <div class="project-stack">
-          <span class="stack-tag">Claude API</span>
-          <span class="stack-tag">React</span>
           <span class="stack-tag">Lovable</span>
+          <span class="stack-tag">IA Aplicada</span>
         </div>
+        <a href="https://tcgcatlog.com/" target="_blank" class="project-cta">
+          Ver produto
+          <span>↗</span>
+        </a>
       </div>
 
       <div class="project-card reveal reveal-delay-3">
-        <div class="project-type">MVP</div>
-        <div class="project-name">Component Library Dashboard</div>
-        <p class="project-problem">Com dezenas de módulos customizados no HubSpot, o time não sabia o que existia, quais estavam em uso, e quais eram redundantes ou desatualizados.</p>
+        <div class="project-type">Em desenvolvimento</div>
+        <div class="project-name">Sistema de retrospectivas para squads</div>
+        <p class="project-problem">Produto em desenvolvimento focado em transformar retrospectivas em fluxos rastreáveis de acompanhamento, priorização e execução dentro das squads.</p>
         <div class="project-solution-label">// Solução</div>
-        <p class="project-solution">Dashboard centralizado que documenta e categoriza todos os componentes do CMS, com preview, status de uso e responsável. Construído com IA para acelerar a parte repetitiva.</p>
+        <p class="project-solution">A plataforma centraliza ações, responsáveis, status e evolução das demandas geradas nas retrôs — reduzindo perda de contexto e aumentando visibilidade operacional entre os times.</p>
         <div class="project-stack">
-          <span class="stack-tag">Claude</span>
-          <span class="stack-tag">HubSpot</span>
-          <span class="stack-tag">Next.js</span>
+          <span class="stack-tag">Em desenvolvimento</span>
+          <span class="stack-tag">IA aplicada</span>
         </div>
       </div>
 
@@ -1616,7 +1669,7 @@
       <div class="cms-card reveal">
         <div class="cms-icon">📐</div>
         <div class="cms-card-title">Páginas Dinâmicas</div>
-        <p class="cms-card-desc">Arquitetura de templates que geram páginas completas a partir de dados estruturados — sem duplicação de código e com consistência visual garantida.</p>
+        <p class="cms-card-desc">Arquitetura de templates que geram páginas completas a partir de dados estruturados, sem duplicação de código e com consistência visual garantida. Gerando escala exponencial em criação de páginas de produtos.</p>
         <ul class="cms-benefits">
           <li>Templates 100% reutilizáveis</li>
           <li>Conteúdo gerenciado pelo time</li>
@@ -1627,15 +1680,15 @@
       <div class="cms-card reveal reveal-delay-1">
         <div class="cms-icon">🧩</div>
         <div class="cms-card-title">Componentes e Widgets</div>
-        <p class="cms-card-desc">Módulos atômicos e compostos, configuráveis via editor visual. Variações, estados e comportamentos definidos no sistema — não no código de cada página.</p>
+        <p class="cms-card-desc">Módulos personalizáveis e escaláveis, configuráveis via editor visual. Variações, estados e comportamentos definidos no sistema, não no código de cada página.</p>
         <ul class="cms-benefits">
-          <li>Design system no CMS</li>
+          <li>100% personalizáveis</li>
           <li>Variações sem duplicação</li>
           <li>Consistência em escala</li>
         </ul>
       </div>
 
-      <div class="cms-card reveal reveal-delay-2">
+      <!--<div class="cms-card reveal reveal-delay-2">
         <div class="cms-icon">🔗</div>
         <div class="cms-card-title">Integração com Dados</div>
         <p class="cms-card-desc">Conexão entre CMS e fontes externas — CRMs, planilhas, APIs de produtos. Páginas que atualizam automaticamente quando os dados mudam.</p>
@@ -1644,26 +1697,26 @@
           <li>Sem atualização manual</li>
           <li>Sincronização automática</li>
         </ul>
-      </div>
+      </div>-->
     </div>
 
     <div class="cms-highlight reveal">
       <div class="cms-highlight-text">
         <div class="cms-highlight-title">O resultado concreto</div>
-        <p class="cms-highlight-desc">Times de marketing passam de "abrir ticket e esperar" para publicar, testar e iterar de forma autônoma. Isso não é só agilidade — é eliminar o gargalo estrutural que impede empresas de crescer no digital.</p>
+        <p class="cms-highlight-desc">Times de marketing deixam de depender de desenvolvimento para criar novas páginas, atualizar conteúdo e testar estruturas. O CMS passa a funcionar como sistema operacional de conteúdo — não apenas como publicador de páginas.</p>
       </div>
       <div class="cms-metrics">
         <div class="metric">
-          <div class="metric-value">90%</div>
-          <div class="metric-label">menos tickets</div>
+          <div class="metric-value">⚡</div>
+          <div class="metric-label">Publicação sem<br/>fila técnica</div>
         </div>
         <div class="metric">
-          <div class="metric-value">5×</div>
-          <div class="metric-label">mais velocidade</div>
+          <div class="metric-value">🧩</div>
+          <div class="metric-label">Estruturas<br/>reutilizáveis<br/> em escala</div>
         </div>
         <div class="metric">
-          <div class="metric-value">∞</div>
-          <div class="metric-label">escalabilidade</div>
+          <div class="metric-value">🔗</div>
+          <div class="metric-label">Conteúdo <br/>centralizado<br/>e consistente</div>
         </div>
       </div>
     </div>
@@ -1677,7 +1730,7 @@
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow reveal">Capacidades</div>
-      <h2 class="section-title reveal reveal-delay-1">O que eu trago<br>para o seu projeto.</h2>
+      <h2 class="section-title reveal reveal-delay-1">Como eu estruturo <br/>projetos digitais.</h2>
     </div>
 
       <div class="skills-grid">
@@ -1685,7 +1738,7 @@
         <div class="skill-number">01</div>
         <div class="skill-content">
           <div class="skill-title">Arquitetura de CMS</div>
-          <p class="skill-desc">Estruturo portais de HubSpot e Duda como sistemas — com hierarquia de templates, biblioteca de módulos e governança de conteúdo. Não começo pelo visual, começo pelo modelo de dados.</p>
+          <p class="skill-desc">Estruturo HubSpot e Duda como sistemas escaláveis, não como conjuntos de páginas isoladas. Templates, módulos e dados seguem uma lógica reutilizável que reduz retrabalho e mantém consistência operacional.</p>
           <div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div>
         </div>
       </div>
@@ -1693,8 +1746,8 @@
       <div class="skill-item reveal reveal-delay-1">
         <div class="skill-number">02</div>
         <div class="skill-content">
-          <div class="skill-title">Componentização</div>
-          <p class="skill-desc">Construo componentes atômicos que compostos formam qualquer layout — seguindo os princípios de design system diretamente dentro do CMS, sem precisar de Storybook ou Figma separados.</p>
+          <div class="skill-title">Componentização real</div>
+          <p class="skill-desc">Construo bibliotecas de componentes configuráveis que permitem criar novas páginas sem reinventar layout, lógica ou comportamento a cada entrega.</p>
           <div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div>
         </div>
       </div>
@@ -1702,8 +1755,8 @@
       <div class="skill-item reveal reveal-delay-2">
         <div class="skill-number">03</div>
         <div class="skill-content">
-          <div class="skill-title">Prototipação com IA</div>
-          <p class="skill-desc">Uso Claude e Lovable para prototipar soluções em horas, não semanas. Valido antes de construir — o que reduz retrabalho e alinha expectativas antes de qualquer linha de código real.</p>
+          <div class="skill-title">Prototipação acelerada com IA</div>
+          <p class="skill-desc">Uso Claude, Lovable e IA generativa para validar ideias, testar fluxos e acelerar construção antes da implementação final no CMS.</p>
           <div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div>
         </div>
       </div>
@@ -1711,8 +1764,8 @@
       <div class="skill-item reveal reveal-delay-3">
         <div class="skill-number">04</div>
         <div class="skill-content">
-          <div class="skill-title">Performance e Precisão</div>
-          <p class="skill-desc">Entrego páginas limpas — sem JS desnecessário, sem dependências que pesam. Performance não é pós-entrega, é parte do processo de construção desde o primeiro componente.</p>
+          <div class="skill-title">Performance como arquitetura</div>
+          <p class="skill-desc">Evito dependências desnecessárias e construo componentes leves desde a base. Performance não entra no final do projeto, faz parte da estrutura desde o primeiro módulo.</p>
           <div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div>
         </div>
       </div>
@@ -1727,39 +1780,39 @@
   <div class="container">
     <div class="section-header" style="text-align:center; margin-bottom:5rem;">
       <div class="section-eyebrow reveal" style="justify-content:center">Como trabalho</div>
-      <h2 class="section-title reveal reveal-delay-1" style="max-width:480px;margin:0 auto 1.25rem">Processo claro.<br>Entrega previsível.</h2>
-      <p class="section-lead reveal reveal-delay-2" style="margin:0 auto">Cada projeto segue um fluxo que minimiza risco e garante que o que foi acordado é o que é entregue.</p>
+      <h2 class="section-title reveal reveal-delay-1" style="max-width:480px;margin:0 auto 1.25rem">Clareza no processo. <br/>Menos retrabalho.</h2>
+      <p class="section-lead reveal reveal-delay-2" style="margin:0 auto">Cada etapa existe para validar contexto, reduzir ambiguidades e garantir que o sistema final seja sustentável para o time após a entrega.</p>
     </div>
 
     <div class="process-flow">
       <div class="process-step reveal">
         <div class="process-connector"><div class="process-num">01</div></div>
-        <div class="process-step-title">Entendimento</div>
-        <p class="process-step-desc">Mapeio o problema real, não apenas o pedido. Entendo o time, as ferramentas e as limitações antes de propor qualquer solução.</p>
+        <div class="process-step-title">Personalização orientada ao time</div>
+        <p class="process-step-desc">Antes de estruturar componentes e templates, entendo quem fará a manutenção do CMS, marketing, times técnicos ou usuários menos experientes. As opções de configuração são pensadas para o nível de autonomia real de cada operação.</p>
       </div>
 
       <div class="process-step reveal reveal-delay-1">
         <div class="process-connector"><div class="process-num">02</div></div>
-        <div class="process-step-title">Prototipação com IA</div>
-        <p class="process-step-desc">Uso Claude e Lovable para construir uma versão funcional em horas. O objetivo é ter algo real para discutir, não slides com wireframes.</p>
+        <div class="process-step-title">Fidelidade ao que foi validado</div>
+        <p class="process-step-desc">O desenvolvimento segue a proposta visual e estrutural aprovada no Figma, garantindo consistência entre expectativa, interface e entrega final.</p>
       </div>
 
       <div class="process-step reveal reveal-delay-2">
         <div class="process-connector"><div class="process-num">03</div></div>
-        <div class="process-step-title">Validação</div>
-        <p class="process-step-desc">Apresento o protótipo, coleto feedback e ajusto antes de partir para implementação. Evita retrabalho e alinha expectativas.</p>
+        <div class="process-step-title">Entrega faseada e alinhamento contínuo</div>
+        <p class="process-step-desc">As implementações são entregues em etapas para homologação parcial, refinamento técnico e ajustes visuais antes da replicação em novos módulos e componentes.</p>
       </div>
 
       <div class="process-step reveal reveal-delay-3">
         <div class="process-connector"><div class="process-num">04</div></div>
-        <div class="process-step-title">Implementação no CMS</div>
-        <p class="process-step-desc">Construo o sistema validado diretamente no CMS — com atenção à componentização, performance e usabilidade para o time de marketing.</p>
+        <div class="process-step-title">Testes e refinamento técnico</div>
+        <p class="process-step-desc">Antes da conclusão, realizo validações de comportamento, responsividade e usabilidade para identificar ajustes necessários e garantir estabilidade da entrega.</p>
       </div>
 
       <div class="process-step reveal reveal-delay-4">
         <div class="process-connector"><div class="process-num">05</div></div>
-        <div class="process-step-title">Otimização</div>
-        <p class="process-step-desc">Após o lançamento, reviso performance, analiso uso dos componentes e documento o sistema para garantir autonomia do time.</p>
+        <div class="process-step-title">Autonomia após a entrega</div>
+        <p class="process-step-desc">A finalização inclui documentação e treinamento de manutenção quando necessário, garantindo que o time consiga operar o CMS sem dependência constante de desenvolvimento.</p>
       </div>
     </div>
   </div>
@@ -1775,14 +1828,14 @@
         <span class="avail-dot"></span>
         Disponível para novos projetos — respondo em até 24h
       </div>
-      <h2 class="contact-headline reveal reveal-delay-1">Vamos construir<br><span>algo que escala.</span></h2>
-      <p class="contact-sub reveal reveal-delay-2">Seja um projeto de CMS, um protótipo com IA ou uma arquitetura de conteúdo do zero — estou disponível para conversar.</p>
+      <h2 class="contact-headline reveal reveal-delay-1">Vamos construir <span>algo que escala.</span></h2>
+      <p class="contact-sub reveal reveal-delay-2">Seja um projeto de CMS, um protótipo com IA ou uma ferramenta do zero. Estou disponível para conversar.</p>
       <div class="contact-links reveal reveal-delay-3">
-        <a href="https://wa.me/5551999999999" class="contact-link" target="_blank" rel="noopener">
+        <a href="https://wa.me/5511973124628" class="contact-link" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.526 5.845L.057 23.885a.5.5 0 0 0 .611.61l6.101-1.457A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.686-.53-5.197-1.449l-.367-.22-3.8.908.924-3.735-.24-.38A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
           WhatsApp
         </a>
-        <a href="https://linkedin.com/in/danielsanchez" class="contact-link" target="_blank" rel="noopener">
+        <a href="https://linkedin.com/in/danielbsanchez" class="contact-link" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn
         </a>
@@ -1804,38 +1857,32 @@
       <div class="clients-row">
         <div class="client-logo">
           <div class="client-logo-box">
-            <div class="client-logo-icon">🟠</div>
-            <span class="client-logo-name">HubSpot</span>
+            <div class="client-logo-icon">🟣</div>
+            <span class="client-logo-name">Tropical Hub</span>
           </div>
         </div>
         <div class="client-logo">
           <div class="client-logo-box">
             <div class="client-logo-icon">🔵</div>
-            <span class="client-logo-name">Duda</span>
+            <span class="client-logo-name">Startse</span>
           </div>
         </div>
         <div class="client-logo">
           <div class="client-logo-box">
-            <div class="client-logo-icon">⬛</div>
-            <span class="client-logo-name">Acme Corp</span>
+            <div class="client-logo-icon">🔴</div>
+            <span class="client-logo-name">+A Educação</span>
           </div>
         </div>
         <div class="client-logo">
           <div class="client-logo-box">
-            <div class="client-logo-icon">🟢</div>
-            <span class="client-logo-name">Agência Verde</span>
+            <div class="client-logo-icon">🔵</div>
+            <span class="client-logo-name">Herdei</span>
           </div>
         </div>
         <div class="client-logo">
           <div class="client-logo-box">
-            <div class="client-logo-icon">🔷</div>
-            <span class="client-logo-name">Nexus SaaS</span>
-          </div>
-        </div>
-        <div class="client-logo">
-          <div class="client-logo-box">
-            <div class="client-logo-icon">🟣</div>
-            <span class="client-logo-name">Studio X</span>
+            <div class="client-logo-icon">🔴</div>
+            <span class="client-logo-name">NA5</span>
           </div>
         </div>
       </div>
@@ -1854,7 +1901,7 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-copy">© 2025 Daniel Sanchez — Todos os direitos reservados</div>
+      <div class="footer-copy">© 2026 Daniel Sanchez — Todos os direitos reservados</div>
       <div class="footer-brand">ds<span>.</span>dev</div>
     </div>
   </div>
