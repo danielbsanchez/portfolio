@@ -734,87 +734,6 @@
     line-height: 1.6;
   }
 
-  /* PROCESS */
-  .process-flow {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0;
-    position: relative;
-  }
-
-  /* connector line between circles only */
-  .process-step {
-    flex: 1;
-    text-align: center;
-    padding: 0;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .process-connector {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 1.5rem;
-  }
-
-  .process-connector::before {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-
-  .process-connector::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-
-  /* first step: no left line */
-  .process-step:first-child .process-connector::before { display: none; }
-
-  /* last step: no right line */
-  .process-step:last-child .process-connector::after { display: none; }
-
-  .process-num {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1px solid var(--orange-border);
-    background: var(--bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: var(--orange);
-    font-weight: 500;
-    position: relative;
-    z-index: 1;
-    flex-shrink: 0;
-  }
-
-  .process-step-title {
-    font-family: var(--font-display);
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--text);
-    letter-spacing: -0.01em;
-    margin-bottom: 0.5rem;
-    padding: 0 0.75rem;
-  }
-
-  .process-step-desc {
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-    padding: 0 0.75rem;
-  }
-
   /* CONTACT */
   #contact {
     background: var(--bg2);
@@ -1447,7 +1366,6 @@
       <li><a href="#projetos">Projetos de IA</a></li>
       <li><a href="#cms">Sistemas CMS</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#processo">Processo</a></li>
       <li><a href="#contato" class="nav-cta">Falar comigo</a></li>
     </ul>
     <button class="nav-hamburger" id="hamburger" aria-label="Menu">
@@ -1462,7 +1380,6 @@
   <a href="#projetos" class="mobile-link">Projetos</a>
   <a href="#cms" class="mobile-link">Sistemas CMS</a>
   <a href="#skills" class="mobile-link">Skills</a>
-  <a href="#processo" class="mobile-link">Processo</a>
   <a href="#contato" class="mobile-link">Falar comigo →</a>
 </div>
 
@@ -1804,7 +1721,7 @@
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow reveal">Capacidades</div>
-      <h2 class="section-title reveal reveal-delay-1">Como eu estruturo <br/>projetos digitais.</h2>
+      <h2 class="section-title reveal reveal-delay-1">Especialidades de atuação.</h2>
     </div>
 
       <div class="skills-grid">
@@ -1812,7 +1729,7 @@
         <div class="skill-number">01</div>
         <div class="skill-content">
           <div class="skill-title">Arquitetura de CMS</div>
-          <p class="skill-desc">Estruturo HubSpot e Duda como sistemas escaláveis, não como conjuntos de páginas isoladas. Templates, módulos e dados seguem uma lógica reutilizável que reduz retrabalho e mantém consistência operacional.</p>
+          <p class="skill-desc">Transformo HubSpot e Duda em sistemas escaláveis, com governança, reutilização e autonomia para evolução contínua.</p>
           <div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div>
         </div>
       </div>
@@ -1820,73 +1737,28 @@
       <div class="skill-item reveal reveal-delay-1">
         <div class="skill-number">02</div>
         <div class="skill-content">
-          <div class="skill-title">Componentização real</div>
-          <p class="skill-desc">Construo bibliotecas de componentes configuráveis que permitem criar novas páginas sem reinventar layout, lógica ou comportamento a cada entrega.</p>
-          <div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div>
+          <div class="skill-title">Componentização escalável</div>
+          <p class="skill-desc">Bibliotecas de módulos configuráveis que permitem criar novas experiências sem duplicação de código ou comportamento.</p>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div>
         </div>
       </div>
 
       <div class="skill-item reveal reveal-delay-2">
         <div class="skill-number">03</div>
         <div class="skill-content">
-          <div class="skill-title">Prototipação acelerada com IA</div>
-          <p class="skill-desc">Uso Claude, Lovable e IA generativa para validar ideias, testar fluxos e acelerar construção antes da implementação final no CMS.</p>
-          <div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div>
+          <div class="skill-title">Autonomia operacional</div>
+          <p class="skill-desc">Estruturo sistemas para que marketing publique, teste e evolua conteúdo sem depender constantemente de desenvolvimento.</p>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div>
         </div>
       </div>
 
       <div class="skill-item reveal reveal-delay-3">
         <div class="skill-number">04</div>
         <div class="skill-content">
-          <div class="skill-title">Performance como arquitetura</div>
-          <p class="skill-desc">Evito dependências desnecessárias e construo componentes leves desde a base. Performance não entra no final do projeto, faz parte da estrutura desde o primeiro módulo.</p>
-          <div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div>
+          <div class="skill-title">IA aplicada a produtos</div>
+          <p class="skill-desc">Uso IA para validar hipóteses, acelerar prototipação e construir ferramentas que resolvem gargalos operacionais reais.</p>
+          <div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- PROCESSO -->
-<section id="processo">
-  <div class="container">
-    <div class="section-header" style="text-align:center; margin-bottom:5rem;">
-      <div class="section-eyebrow reveal" style="justify-content:center">Como trabalho</div>
-      <h2 class="section-title reveal reveal-delay-1" style="max-width:480px;margin:0 auto 1.25rem">Clareza no processo. <br/>Menos retrabalho.</h2>
-      <p class="section-lead reveal reveal-delay-2" style="margin:0 auto">Cada etapa existe para validar contexto, reduzir ambiguidades e garantir que o sistema final seja sustentável para o time após a entrega.</p>
-    </div>
-
-    <div class="process-flow">
-      <div class="process-step reveal">
-        <div class="process-connector"><div class="process-num">01</div></div>
-        <div class="process-step-title">Personalização orientada ao time</div>
-        <p class="process-step-desc">Antes de estruturar componentes e templates, entendo quem fará a manutenção do CMS, marketing, times técnicos ou usuários menos experientes. As opções de configuração são pensadas para o nível de autonomia real de cada operação.</p>
-      </div>
-
-      <div class="process-step reveal reveal-delay-1">
-        <div class="process-connector"><div class="process-num">02</div></div>
-        <div class="process-step-title">Fidelidade ao que foi validado</div>
-        <p class="process-step-desc">O desenvolvimento segue a proposta visual e estrutural aprovada no Figma, garantindo consistência entre expectativa, interface e entrega final.</p>
-      </div>
-
-      <div class="process-step reveal reveal-delay-2">
-        <div class="process-connector"><div class="process-num">03</div></div>
-        <div class="process-step-title">Entrega faseada e alinhamento contínuo</div>
-        <p class="process-step-desc">As implementações são entregues em etapas para homologação parcial, refinamento técnico e ajustes visuais antes da replicação em novos módulos e componentes.</p>
-      </div>
-
-      <div class="process-step reveal reveal-delay-3">
-        <div class="process-connector"><div class="process-num">04</div></div>
-        <div class="process-step-title">Testes e refinamento técnico</div>
-        <p class="process-step-desc">Antes da conclusão, realizo validações de comportamento, responsividade e usabilidade para identificar ajustes necessários e garantir estabilidade da entrega.</p>
-      </div>
-
-      <div class="process-step reveal reveal-delay-4">
-        <div class="process-connector"><div class="process-num">05</div></div>
-        <div class="process-step-title">Autonomia após a entrega</div>
-        <p class="process-step-desc">A finalização inclui documentação e treinamento de manutenção quando necessário, garantindo que o time consiga operar o CMS sem dependência constante de desenvolvimento.</p>
       </div>
     </div>
   </div>
