@@ -1351,6 +1351,37 @@
   transform: scale(1.03);
   opacity: 1;
 }
+
+
+.badge-neutral {
+  background: var(--bg2);
+  color: var(--text-muted);
+  border: 1px solid var(--border-hover);
+}
+
+.mock-product-link {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: fit-content;
+  margin-top: 0.75rem;
+  color: var(--orange);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s, gap 0.2s;
+}
+
+.mock-product-link:hover {
+  color: #FB923C;
+  gap: 0.55rem;
+}
+
+.mock-product-link:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
 </style>
 </head>
 <body>
@@ -1424,27 +1455,45 @@
           <div class="mock-content">
             <div class="mock-card-list">
               <div class="mock-card">
-                <div class="mock-icon" style="background:rgba(249,115,22,0.1);border-color:var(--orange-border)">🔗</div>
+                <div class="mock-icon" style="background:var(--orange-glow)">🔗</div>
                 <div class="mock-text-block">
                   <div class="mock-title">Páginas dinâmicas integradas ao CMS</div>
-                  <div class="mock-desc">Estruturas geradas e alimentadas por Google Sheets no Duda e HubDB no HubSpot para escalar conteúdo com consistência e autonomia.</div>
-                  <span class="mock-badge badge-orange">HubSpot CMS & Duda CMS</span>
+                  <div class="mock-desc">
+                    Estruturas geradas e alimentadas por Google Sheets no Duda e HubDB
+                    no HubSpot para escalar conteúdo com consistência e autonomia.
+                  </div>
+                  <span class="mock-badge badge-neutral">HubSpot · Duda</span>
                 </div>
               </div>
+
               <div class="mock-card">
-              <div class="mock-icon" style="background:rgba(34,197,94,0.08);border-color:var(--border)">⚡</div>
+                <div class="mock-icon" style="background:var(--green-subtle)">⚡</div>
                 <div class="mock-text-block">
                   <div class="mock-title">Ferramentas internas e micro SaaS com IA</div>
-                  <div class="mock-desc">Soluções criadas para automatizar processos, validar ideias rapidamente e resolver gargalos operacionais reais.</div>
-                  <span class="mock-badge badge-green">Claude, Lovable + IA aplicada</span>
+                  <div class="mock-desc">
+                    Soluções criadas para automatizar processos, validar ideias
+                    rapidamente e resolver gargalos operacionais reais.
+                  </div>
+                  <span class="mock-badge badge-neutral">Automação de processos</span>
                 </div>
               </div>
+
               <div class="mock-card">
-                <div class="mock-icon" style="background:rgba(249,115,22,0.1);border-color:rgba(34,197,94,0.2)">🧩</div>
+                <div class="mock-icon" style="background:var(--orange-glow)">🧩</div>
                 <div class="mock-text-block">
-                  <div class="mock-title">Temas próprios e bibliotecas de componentes</div>
-                  <div class="mock-desc">Sistemas componentizados em HubSpot e Duda que permitem autonomia total para times de marketing criarem e escalarem páginas.</div>
-                  <span class="mock-badge badge-orange">HubSpot CMS & Duda CMS</span>
+                  <div class="mock-title">DBS Sites — LPs com CMS</div>
+                  <div class="mock-desc">Sites rápidos e 100% editáveis.</div>
+                  <span class="mock-badge badge-neutral">
+                    Painel próprio · Conteúdo editável
+                  </span>
+                  <a
+                    href="https://sites.dbsanchez.com.br/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mock-product-link"
+                  >
+                    Conhecer o DBS Sites <span aria-hidden="true">↗</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1453,8 +1502,8 @@
         <div class="float-card">
           <div class="float-icon">🚀</div>
           <div>
-            <div class="float-label">Último projeto</div>
-            <div class="float-value">Módulos HubSpot</div>
+            <div class="float-label">NOVO</div>
+            <div class="float-value">CMS Personalizado</div>
           </div>
         </div>
       </div>
@@ -1579,18 +1628,18 @@
 
       <div class="project-card reveal">
         <div class="project-preview">
-          <img src="assets/print-bancada-digital.png" alt="Preview do projeto Bancada Digital">
+          <img src="assets/print-dbs-sites-cms-personalizavel.png" alt="Preview do projeto DBS Sites">
         </div>
         <div class="project-type">Produto</div>
-        <div class="project-name">Bancada Digital</div>
-        <p class="project-problem">Plataforma de gestão para artesãos e pequenos produtores que recebem pedidos por WhatsApp e precisam acompanhar produção, prazos e finanças em um só lugar.</p>
+        <div class="project-name">DBS Sites</div>
+        <p class="project-problem">Landing pages profissionais sob medida para pequenas e médias empresas, desenvolvidas com foco em conversão e velocidade de carregamento.</p>
         <div class="project-solution-label">// Solução</div>
-        <p class="project-solution">Reúne pedidos, etapas de produção, produtos, tarefas e financeiro numa experiência pensada para o uso no celular.</p>
+        <p class="project-solution">Entrega com painel administrativo próprio onde o cliente altera textos, fotos, produtos e seções com total autonomia, sem depender de suporte técnico nem pagar mensalidades abusivas de CMS fechado.</p>
         <div class="project-stack">
           <span class="stack-tag">Lovable</span>
-          <span class="stack-tag">IA aplicada</span>
+          <span class="stack-tag">CMS personalizado</span>
         </div>
-        <a href="https://bancadadigital.com.br/" target="_blank" class="project-cta">
+        <a href="https://sites.dbsanchez.com.br/" target="_blank" class="project-cta">
           Ver produto
           <span>↗</span>
         </a>
@@ -1610,6 +1659,25 @@
           <span class="stack-tag">IA aplicada</span>
         </div>
         <a href="https://retroflow.dbsanchez.com.br/" target="_blank" class="project-cta">
+          Ver produto
+          <span>↗</span>
+        </a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-preview">
+          <img src="assets/print-bancada-digital.png" alt="Preview do projeto Bancada Digital">
+        </div>
+        <div class="project-type">Produto</div>
+        <div class="project-name">Bancada Digital</div>
+        <p class="project-problem">Plataforma de gestão para artesãos e pequenos produtores que recebem pedidos por WhatsApp e precisam acompanhar produção, prazos e finanças em um só lugar.</p>
+        <div class="project-solution-label">// Solução</div>
+        <p class="project-solution">Reúne pedidos, etapas de produção, produtos, tarefas e financeiro numa experiência pensada para o uso no celular.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Lovable</span>
+          <span class="stack-tag">IA aplicada</span>
+        </div>
+        <a href="https://bancadadigital.com.br/" target="_blank" class="project-cta">
           Ver produto
           <span>↗</span>
         </a>
