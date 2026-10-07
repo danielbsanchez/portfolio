@@ -1382,6 +1382,353 @@
   outline-offset: 4px;
   border-radius: 2px;
 }
+
+/* PORTFÓLIO COMPACTO */
+#projetos {
+  padding: 4.5rem 0;
+  scroll-margin-top: 80px;
+}
+
+#projetos .section-header {
+  margin-bottom: 2rem;
+}
+
+#projetos .section-lead {
+  max-width: 680px;
+}
+
+.portfolio-products,
+.portfolio-tools {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.portfolio-products {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 1.25rem;
+}
+
+.portfolio-tools {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.portfolio-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition:
+    border-color 0.25s,
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.portfolio-card:hover {
+  border-color: var(--orange-border);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-preview {
+  height: 110px;
+  flex-shrink: 0;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.portfolio-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s;
+}
+
+.portfolio-card:hover .portfolio-preview img {
+  transform: scale(1.03);
+}
+
+.portfolio-content {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.portfolio-type {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.portfolio-name {
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.portfolio-description {
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  font-size: 0.825rem;
+  line-height: 1.6;
+}
+
+.portfolio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: auto;
+  color: var(--orange);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s, gap 0.2s;
+}
+
+.portfolio-link:hover {
+  color: #FB923C;
+  gap: 0.55rem;
+}
+
+.portfolio-link:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* Produtos: imagem à esquerda e conteúdo à direita */
+.portfolio-card-horizontal {
+  display: grid;
+  grid-template-columns: 34% minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+.portfolio-card-horizontal .portfolio-preview {
+  height: auto;
+  min-height: 160px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .portfolio-products {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-tools {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* A última ferramenta ocupa a linha completa no tablet */
+  .portfolio-tools .portfolio-card:last-child {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 34% minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .portfolio-tools .portfolio-card:last-child .portfolio-preview {
+    height: auto;
+    min-height: 150px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  #projetos {
+    padding: 3.5rem 0;
+  }
+
+  .portfolio-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-card-horizontal,
+  .portfolio-tools .portfolio-card:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .portfolio-preview,
+  .portfolio-card-horizontal .portfolio-preview,
+  .portfolio-tools .portfolio-card:last-child .portfolio-preview {
+    height: 150px;
+    min-height: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.service-migration-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+  color: var(--orange);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s, gap 0.2s;
+}
+
+.service-migration-link:hover {
+  color: #FB923C;
+  gap: 0.6rem;
+}
+
+.service-migration-link:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.sites-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 1.75rem;
+  background: linear-gradient(135deg, var(--bg3), var(--bg2));
+  border: 1px solid var(--orange-border);
+  border-radius: 12px;
+}
+
+.sites-banner-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.sites-banner-title {
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.sites-banner-description {
+  max-width: 620px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+.sites-banner .btn-primary {
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  .sites-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+}
+
+/* EXPERIÊNCIA */
+#experiencia {
+  padding: 3rem 0;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.experience-title {
+  margin-bottom: 0.6rem;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+.experience-description {
+  max-width: 580px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.experience-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.experience-list li {
+  padding: 0.55rem 1rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.4;
+  opacity: 0.75;
+}
+
+@media (max-width: 600px) {
+  #experiencia {
+    padding: 2.5rem 0;
+  }
+
+  .experience-list {
+    gap: 0.5rem;
+  }
+
+  .experience-list li {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+.experience-marker {
+  color: var(--orange);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.experience-list .experience-marker {
+  margin-left: 0.2rem;
+}
+
+.experience-note {
+  max-width: 650px;
+  margin: 1.25rem auto 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.experience-note .experience-marker {
+  margin-right: 0.25rem;
+}
 </style>
 </head>
 <body>
@@ -1513,74 +1860,6 @@
 
 <div class="section-divider"></div>
 
-<!-- ABORDAGEM -->
-<!--<section id="abordagem">
-  <div class="container">
-    <div class="abord-inner">
-
-      <div class="abord-left">
-        <div class="section-eyebrow reveal">Como eu penso</div>
-        <h2 class="section-title reveal reveal-delay-1">Estruturo sistemas para marketing operar. <em style="color:var(--orange);font-style:normal">Não só páginas.</em></h2>
-        <p class="abord-body reveal reveal-delay-2">
-          Vejo CMS como uma <strong>camada operacional do produto</strong>, não apenas como ferramenta de publicação. Estruturo componentes, dados e fluxos pensando em autonomia real para quem vai operar o sistema no dia a dia.
-        </p>
-        <p class="abord-body reveal reveal-delay-3" style="margin-top:1rem">
-          Estruturo componentes, dados e fluxos pensando em <strong>autonomia real</strong> para quem vai operar o sistema no dia a dia.
-        </p>
-        <div class="abord-narrative reveal reveal-delay-4">
-          // Comecei construindo páginas em CMS.<br>
-          // Evoluí para <em>arquiteturas componentizadas</em>.<br>
-          // Hoje construo sistemas operáveis por marketing.
-        </div>
-      </div>
-
-      <div class="abord-right">
-        <div class="abord-diff-title reveal">Diferenciais práticos</div>
-        <ul class="abord-list">
-          <li class="abord-item reveal reveal-delay-1">
-            <div class="abord-item-icon">🧩</div>
-            <div class="abord-item-content">
-              <div class="abord-item-title">Componentes pensados para escalar</div>
-              <div class="abord-item-desc">Crio estruturas reutilizáveis em HubSpot e Duda que permitem criar novas páginas sem reconstruir layout a cada entrega.</div>
-            </div>
-          </li>
-          <li class="abord-item reveal reveal-delay-2">
-            <div class="abord-item-icon">👥</div>
-            <div class="abord-item-content">
-              <div class="abord-item-title">Marketing opera sem depender de dev</div>
-              <div class="abord-item-desc">Os sistemas são pensados para edição, publicação e expansão de conteúdo sem necessidade de desenvolvimento para cada ajuste.</div>
-            </div>
-          </li>
-          <li class="abord-item reveal reveal-delay-3">
-            <div class="abord-item-icon">🔗</div>
-            <div class="abord-item-content">
-              <div class="abord-item-title">CMS conectado a fontes externas</div>
-              <div class="abord-item-desc">Integro Google Sheets, APIs e estruturas dinâmicas ao CMS para atualizar conteúdo sem operação manual repetitiva.</div>
-            </div>
-          </li>
-          <li class="abord-item reveal reveal-delay-4">
-            <div class="abord-item-icon">⚡</div>
-            <div class="abord-item-content">
-              <div class="abord-item-title">IA usada antes da implementação</div>
-              <div class="abord-item-desc">Uso Claude, GPT e Lovable para validar soluções, testar estruturas e acelerar decisões antes da construção final.</div>
-            </div>
-          </li>
-          <li class="abord-item reveal reveal-delay-5">
-            <div class="abord-item-icon">🎯</div>
-            <div class="abord-item-content">
-              <div class="abord-item-title">Performance definida na arquitetura</div>
-              <div class="abord-item-desc">Evito dependências e JS desnecessário desde a construção dos componentes — não como otimização pós-projeto.</div>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>-->
-
-<div class="section-divider"></div>
-
 <!-- SERVIÇOS -->
 <section id="servicos">
   <div class="container">
@@ -1598,9 +1877,20 @@
       </div>
       <div class="cms-card reveal reveal-delay-1">
         <div class="cms-icon">🧩</div>
-        <h3 class="cms-card-title">Sites e operações de marketing</h3>
-        <p class="cms-card-desc">Criação, evolução e migração de sites em CMS, com componentes reutilizáveis para o marketing publicar e atualizar conteúdo com autonomia.</p>
-        <ul class="cms-benefits"><li>HubSpot e Duda CMS</li><li>Templates, módulos e páginas dinâmicas</li><li>Organização da operação de conteúdo</li></ul>
+        <h3 class="cms-card-title">Migração e evolução de sites em CMS</h3>
+        <p class="cms-card-desc">
+          Para empresas que já possuem um site e precisam migrar para
+          HubSpot ou Duda, melhorar sua estrutura ou dar mais autonomia
+          ao marketing.
+        </p>
+        <ul class="cms-benefits">
+          <li>Migração para HubSpot ou Duda CMS</li>
+          <li>Templates, módulos e páginas dinâmicas</li>
+          <li>Organização da operação de conteúdo</li>
+        </ul>
+        <a href="#contato" class="service-migration-link">
+          Conversar sobre migração <span aria-hidden="true">→</span>
+        </a>
       </div>
       <div class="cms-card reveal reveal-delay-2">
         <div class="cms-icon">⚙️</div>
@@ -1609,6 +1899,23 @@
         <ul class="cms-benefits"><li>Diagnóstico do fluxo atual</li><li>Protótipos e validação com usuários</li><li>Construção e melhoria contínua</li></ul>
       </div>
     </div>
+    <div class="sites-banner reveal">
+      <div class="sites-banner-copy">
+        <h3 class="sites-banner-title">Ainda não tem um site?</h3>
+        <p class="sites-banner-description">
+          Conheça o DBS Sites: criação de sites e landing pages sob medida,
+          com painel próprio para atualizar seu conteúdo com autonomia.
+        </p>
+      </div>
+      <a
+        href="https://sites.dbsanchez.com.br/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary"
+      >
+        Conhecer o DBS Sites <span aria-hidden="true">↗</span>
+      </a>
+    </div>
     <div style="margin-top:2.5rem" class="reveal"><a href="#contato" class="btn-primary">Conversar sobre um projeto →</a></div>
   </div>
 </section>
@@ -1616,160 +1923,152 @@
 <div class="section-divider"></div>
 
 <!-- PROJETOS COM IA -->
+<!-- PROJETOS -->
 <section id="projetos">
   <div class="container">
     <div class="section-header">
       <div class="section-eyebrow reveal">Projetos e produtos</div>
-      <h2 class="section-title reveal reveal-delay-1">Projetos que colocam ideias em prática.</h2>
-      <p class="section-lead reveal reveal-delay-2">Produtos autorais e ferramentas que criei para organizar operações, testar soluções e resolver problemas do dia a dia. Uso IA quando ela ajuda a acelerar a construção e a validação.</p>
+      <h2 class="section-title reveal reveal-delay-1">
+        Projetos que colocam ideias em prática.
+      </h2>
+      <p class="section-lead reveal reveal-delay-2">
+        Produtos e ferramentas que criei para simplificar operações
+        e transformar ideias em soluções práticas.
+      </p>
     </div>
 
-    <div class="projects-grid">
+    <div class="portfolio-products">
+      <article class="portfolio-card portfolio-card-horizontal reveal">
+        <div class="portfolio-preview">
+          <img
+            src="assets/print-dbs-sites-cms-personalizavel.png"
+            alt="Interface do DBS Sites"
+            loading="lazy"
+          >
+        </div>
+        <div class="portfolio-content">
+          <span class="portfolio-type">Produto</span>
+          <h3 class="portfolio-name">DBS Sites</h3>
+          <p class="portfolio-description">
+            Sites e landing pages com painel próprio para editar
+            conteúdo com autonomia.
+          </p>
+          <a
+            href="https://sites.dbsanchez.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio-link"
+          >
+            Conhecer produto <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </article>
 
-      <div class="project-card reveal">
-        <div class="project-preview">
-          <img src="assets/print-dbs-sites-cms-personalizavel.png" alt="Preview do projeto DBS Sites">
+      <article class="portfolio-card portfolio-card-horizontal reveal reveal-delay-1">
+        <div class="portfolio-preview">
+          <img
+            src="assets/print-bancada-digital.png"
+            alt="Interface da Bancada Digital"
+            loading="lazy"
+          >
         </div>
-        <div class="project-type">Produto</div>
-        <div class="project-name">DBS Sites</div>
-        <p class="project-problem">Landing pages profissionais sob medida para pequenas e médias empresas, desenvolvidas com foco em conversão e velocidade de carregamento.</p>
-        <div class="project-solution-label">// Solução</div>
-        <p class="project-solution">Entrega com painel administrativo próprio onde o cliente altera textos, fotos, produtos e seções com total autonomia, sem depender de suporte técnico nem pagar mensalidades abusivas de CMS fechado.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Lovable</span>
-          <span class="stack-tag">CMS personalizado</span>
+        <div class="portfolio-content">
+          <span class="portfolio-type">Produto</span>
+          <h3 class="portfolio-name">Bancada Digital</h3>
+          <p class="portfolio-description">
+            Pedidos, produção e financeiro para artesãos, organizados
+            em uma plataforma para usar no celular.
+          </p>
+          <a
+            href="https://bancadadigital.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio-link"
+          >
+            Conhecer produto <span aria-hidden="true">↗</span>
+          </a>
         </div>
-        <a href="https://sites.dbsanchez.com.br/" target="_blank" class="project-cta">
-          Ver produto
-          <span>↗</span>
-        </a>
-      </div>
+      </article>
+    </div>
 
-      <div class="project-card reveal reveal-delay-1">
-        <div class="project-preview">
-          <img src="assets/print-retroflow-ferramenta.png" alt="Preview do projeto RetroFlow">
+    <div class="portfolio-tools">
+      <article class="portfolio-card reveal">
+        <div class="portfolio-preview">
+          <img
+            src="assets/print-retroflow-ferramenta.png"
+            alt="Interface do RetroFlow"
+            loading="lazy"
+          >
         </div>
-        <div class="project-type">Ferramenta</div>
-        <div class="project-name">Sistema de retrospectivas para squads</div>
-        <p class="project-problem">RetroFlow é uma ferramenta visual de retrospectivas ágeis criada para transformar discussões de sprint em ações reais. Com uma experiência premium inspirada em produtos como Linear e FigJam, a plataforma combina colaboração em tempo real, organização visual e acompanhamento de to-dos em uma interface moderna e fluida.</p>
-        <div class="project-solution-label">// Solução</div>
-        <p class="project-solution">A plataforma centraliza ações, responsáveis, status e evolução das demandas geradas nas retrôs — reduzindo perda de contexto e aumentando visibilidade operacional entre os times.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Lovable</span>
-          <span class="stack-tag">IA aplicada</span>
+        <div class="portfolio-content">
+          <span class="portfolio-type">Ferramenta</span>
+          <h3 class="portfolio-name">RetroFlow</h3>
+          <p class="portfolio-description">
+            Retrospectivas colaborativas com ações, responsáveis
+            e acompanhamento.
+          </p>
+          <a
+            href="https://retroflow.dbsanchez.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio-link"
+          >
+            Abrir ferramenta <span aria-hidden="true">↗</span>
+          </a>
         </div>
-        <a href="https://retroflow.dbsanchez.com.br/" target="_blank" class="project-cta">
-          Ver produto
-          <span>↗</span>
-        </a>
-      </div>
+      </article>
 
-      <div class="project-card reveal">
-        <div class="project-preview">
-          <img src="assets/print-bancada-digital.png" alt="Preview do projeto Bancada Digital">
+      <article class="portfolio-card reveal reveal-delay-1">
+        <div class="portfolio-preview">
+          <img
+            src="assets/frontend-auditor-ds.png"
+            alt="Interface do Frontend Auditor"
+            loading="lazy"
+          >
         </div>
-        <div class="project-type">Produto</div>
-        <div class="project-name">Bancada Digital</div>
-        <p class="project-problem">Plataforma de gestão para artesãos e pequenos produtores que recebem pedidos por WhatsApp e precisam acompanhar produção, prazos e finanças em um só lugar.</p>
-        <div class="project-solution-label">// Solução</div>
-        <p class="project-solution">Reúne pedidos, etapas de produção, produtos, tarefas e financeiro numa experiência pensada para o uso no celular.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Lovable</span>
-          <span class="stack-tag">IA aplicada</span>
+        <div class="portfolio-content">
+          <span class="portfolio-type">Ferramenta</span>
+          <h3 class="portfolio-name">Frontend Auditor</h3>
+          <p class="portfolio-description">
+            Auditoria de código frontend com identificação de
+            problemas e relatórios compartilháveis.
+          </p>
+          <a
+            href="https://frontend-auditor.dbsanchez.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio-link"
+          >
+            Abrir ferramenta <span aria-hidden="true">↗</span>
+          </a>
         </div>
-        <a href="https://bancadadigital.com.br/" target="_blank" class="project-cta">
-          Ver produto
-          <span>↗</span>
-        </a>
-      </div>
+      </article>
 
-      <div class="project-card reveal reveal-delay-2">
-        <div class="project-preview">
-          <img src="assets/frontend-auditor-ds.png" alt="Frontend Auditor">
+      <article class="portfolio-card reveal reveal-delay-2">
+        <div class="portfolio-preview">
+          <img
+            src="assets/site-budget-dbs.png"
+            alt="Interface do Site Budget"
+            loading="lazy"
+          >
         </div>
-        <div class="project-type">Ferramenta</div>
-        <div class="project-name">Frontend Auditor</div>
-        <p class="project-problem">Plataforma de auditoria frontend criada para validar código antes da publicação. A ferramenta analisa HTML, CSS, JavaScript e templates frontend, identificando problemas de SEO, acessibilidade, performance e boas práticas através de relatórios visuais compartilháveis.</p>
-        <div class="project-solution-label">// Solução</div>
-        <p class="project-solution">Ferramenta desenvolvida para reduzir o ciclo de publicação e revisão técnica de componentes, widgets e landing pages. O sistema realiza análises automáticas, classifica problemas por categoria e impacto, sugere correções, permite comentários e acompanhamento dos findings, além de gerar relatórios públicos compartilháveis para alinhamento entre marketing, produto e desenvolvimento. A solução combina auditoria técnica, governança de qualidade e workflow colaborativo em uma experiência simples, rápida e sem necessidade de cadastro.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Lovable</span>
-          <span class="stack-tag">IA Aplicada</span>
-          <span class="stack-tag">DevTool</span>
+        <div class="portfolio-content">
+          <span class="portfolio-type">Ferramenta</span>
+          <h3 class="portfolio-name">Site Budget</h3>
+          <p class="portfolio-description">
+            Inventário de sites e estimativas de esforço e custo
+            para migração de CMS.
+          </p>
+          <a
+            href="http://orcamento-migracao.dbsanchez.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="portfolio-link"
+          >
+            Abrir ferramenta <span aria-hidden="true">↗</span>
+          </a>
         </div>
-        <a href="https://frontend-auditor.dbsanchez.com.br/" target="_blank" class="project-cta">
-          Ver produto
-          <span>↗</span>
-        </a>
-      </div>
-
-
-      <!--
-      <div class="project-card reveal reveal-delay-2">
-        <div class="project-preview">
-          <img src="assets/print-scriptops-ferramenta.png" alt="Gestão de scripts">
-        </div>
-        <div class="project-type">Ferramenta</div>
-        <div class="project-name">Gestão de scripts</div>
-        <p class="project-problem">Plataforma operacional criada para centralizar a governança de scripts, pixels, embeds e tracking de múltiplos sites em um único workspace moderno. O sistema permite documentar implementações, organizar solicitações, acompanhar histórico de alterações e dar visibilidade técnica para squads de marketing, produto e desenvolvimento.</p>
-        <div class="project-solution-label">// Solução</div>
-        <p class="project-solution">Ferramenta desenvolvida com foco em transparência operacional e organização técnica — permitindo mapear onde cada script está instalado, quem solicitou alterações, status de implementação e regras de carregamento como async/defer. A plataforma combina workflow visual, documentação viva e arquitetura lightweight para reduzir perda de contexto entre times.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Lovable</span>
-          <span class="stack-tag">IA Aplicada</span>
-          <span class="stack-tag">DevTool</span>
-        </div>
-        <a href="https://scriptops-ds.lovable.app/" target="_blank" class="project-cta">
-          Ver produto
-          <span>↗</span>
-        </a>
-      </div>
-      -->
-      <div class="project-card reveal reveal-delay-3">
-        <div class="project-preview">
-          <img src="assets/site-budget-dbs.png" alt="Site Budget by DBS">
-        </div>
-        <div class="project-type">Ferramenta</div>
-        <div class="project-name">Site Budget - Orçar migração de sites</div>
-        <p class="project-problem">Ferramenta criada para transformar a análise de sites existentes em estimativas mais rápidas e consistentes de projetos de migração para CMS — reduzindo o trabalho manual, esquecimentos e diferenças entre orçamentos.</p>
-        <div class="project-solution-label">// Solução</div>
-        <p class="project-solution">
-          Mapeia páginas, seções, módulos globais, artigos e componentes interativos a partir da URL de um site. A ferramenta identifica estruturas repetidas, organiza o inventário para revisão e permite agrupar coleções como cursos, cases ou produtos em páginas dinâmicas.
-
-          Com parâmetros editáveis de horas e valor, calcula o esforço de desenvolvimento e dos processos de migração, gera o orçamento final e permite salvar, reabrir e exportar a análise em PDF. Os resultados permanecem ajustáveis para uma validação manual antes da apresentação ao cliente.
-        </p>
-        <div class="project-stack">
-          <span class="stack-tag">Lovable</span>
-          <span class="stack-tag">Automação de Orçamentos</span>
-          <span class="stack-tag">Migração de Sites</span>
-        </div>
-        <a href="http://orcamento-migracao.dbsanchez.com.br/" target="_blank" class="project-cta">
-          Ver ferramenta
-          <span>↗</span>
-        </a>
-      </div>
-
-
-      <!--<div class="project-card reveal reveal-delay-3">
-        <div class="project-preview">
-          <img src="assets/cliente-ops-ds.png" alt="ClientOps by DS">
-        </div>
-        <div class="project-type">Ferramenta</div>
-        <div class="project-name">ClientOps</div>
-        <p class="project-problem">Plataforma criada para preservar e compartilhar conhecimento operacional crítico de clientes, sites, produtos e aplicações — evitando perda de contexto, retrabalho e erros recorrentes causados por regras específicas que ficam apenas na memória das pessoas.</p>
-        <div class="project-solution-label">// Solução</div>
-        <p class="project-solution">Centraliza exceções, restrições técnicas, integrações especiais, lições aprendidas e particularidades operacionais em uma base de conhecimento pesquisável. A ferramenta permite relacionar regras a assets específicos, documentar impactos, registrar formas de identificação e orientar correções, acelerando onboarding e reduzindo dependência de conhecimento informal entre times.</p>
-        <div class="project-stack">
-          <span class="stack-tag">Lovable</span>
-          <span class="stack-tag">Gestão de Regras</span>
-          <span class="stack-tag">Base de Conhecimento Operacional</span>
-        </div>
-        <a href="https://clientops-ds.lovable.app/" target="_blank" class="project-cta">
-          Ver ferramenta
-          <span>↗</span>
-        </a>
-      </div>-->
-
+      </article>
     </div>
   </div>
 </section>
@@ -1895,6 +2194,63 @@
 
 <div class="section-divider"></div>
 
+
+<!-- EXPERIÊNCIA -->
+<section id="experiencia" aria-labelledby="experiencia-title">
+  <div class="container">
+    <div class="experience-header reveal">
+      <h2 id="experiencia-title" class="experience-title">
+        Experiência em empresas e projetos
+      </h2>
+      <p class="experience-description">
+        Empresas em que atuei e marcas para as quais contribuí
+        em projetos, como parte de equipes e parcerias.
+      </p>
+    </div>
+
+    <ul class="experience-list reveal reveal-delay-1">
+      <li>Tropical Hub</li>
+      <li>StartSe</li>
+      <li>+A Educação</li>
+      <li>Herdei</li>
+      <li>NA5</li>
+      <li>MKT4Sales</li>
+      <li>Help Sales</li>
+
+      <li aria-describedby="experience-a-note">
+        Pós PUCPR Digital <span class="experience-marker" aria-hidden="true">*</span>
+      </li>
+      <li aria-describedby="experience-a-note">
+        Pós PUC-Rio <span class="experience-marker" aria-hidden="true">*</span>
+      </li>
+      <li aria-describedby="experience-a-note">
+        EAD Unisinos <span class="experience-marker" aria-hidden="true">*</span>
+      </li>
+      <li aria-describedby="experience-a-note">
+        EAD Univali <span class="experience-marker" aria-hidden="true">*</span>
+      </li>
+      <li aria-describedby="experience-a-note">
+        HCOR <span class="experience-marker" aria-hidden="true">*</span>
+      </li>
+      <li aria-describedby="experience-a-note">
+        Santa Casa <span class="experience-marker" aria-hidden="true">*</span>
+      </li>
+      <li aria-describedby="experience-a-note">
+        Pós Artmed <span class="experience-marker" aria-hidden="true">*</span>
+      </li>
+      <li>SAGAH</li>
+      <li>Plataforma A</li>
+    </ul>
+
+    <p id="experience-a-note" class="experience-note">
+      <span class="experience-marker" aria-hidden="true">*</span>
+      Atuação na organização e no desenvolvimento de projetos
+      durante meu vínculo como funcionário da +A Educação.
+    </p>
+  </div>
+</section>
+
+
 <!-- CONTACT -->
 <section id="contato">
   <div class="container">
@@ -1917,53 +2273,6 @@
         <a href="#projetos" class="btn-primary">Ver projetos →</a>
       </div>
     </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- CLIENTES + DEPOIMENTO -->
-<section style="padding: 5rem 0;">
-  <div class="container">
-
-    <!-- LOGOS -->
-    <div class="clients-section reveal">
-      <div class="clients-label">Empresas e projetos em que trabalhei</div>
-      <div class="clients-row">
-        <div class="client-logo">
-          <div class="client-logo-box">
-            <div class="client-logo-icon">🟣</div>
-            <span class="client-logo-name">Tropical Hub</span>
-          </div>
-        </div>
-        <div class="client-logo">
-          <div class="client-logo-box">
-            <div class="client-logo-icon">🔵</div>
-            <span class="client-logo-name">Startse</span>
-          </div>
-        </div>
-        <div class="client-logo">
-          <div class="client-logo-box">
-            <div class="client-logo-icon">🔴</div>
-            <span class="client-logo-name">+A Educação</span>
-          </div>
-        </div>
-        <div class="client-logo">
-          <div class="client-logo-box">
-            <div class="client-logo-icon">🔵</div>
-            <span class="client-logo-name">Herdei</span>
-          </div>
-        </div>
-        <div class="client-logo">
-          <div class="client-logo-box">
-            <div class="client-logo-icon">🔴</div>
-            <span class="client-logo-name">NA5</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
   </div>
 </section>
 
